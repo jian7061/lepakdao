@@ -3,13 +3,14 @@ import Head from "next/head";
 import Image from "next/image";
 import styled from "styled-components";
 import { extractLinearGradientParamsFromTransform } from "@figma-plugin/helpers";
+import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
     <Wrapper>
       {/* <Sidebar /> */}
       <MainContainer>
-        {/* <Header /> */}
+        <Header />
         {/* <Main /> */}
       </MainContainer>
     </Wrapper>
@@ -22,7 +23,6 @@ const Wrapper = styled.div`
   background-color: #4570d8;
   color: white;
   display: grid;
-  place-items: center;
 `;
 
 const MainContainer = styled.div`

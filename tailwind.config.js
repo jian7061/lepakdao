@@ -45,10 +45,6 @@ module.exports = {
       80: "0.8",
       100: "1",
     },
-    fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
     extend: {
       spacing: {
         "8xl": "96rem",
