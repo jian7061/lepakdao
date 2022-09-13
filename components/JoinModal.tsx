@@ -5,7 +5,7 @@ import { CustomModal } from "./modal/index";
 import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
-
+import { UploadBox } from "./common/UploadBox";
 export default function JoinModal({
   isOpen,
   onClose,
@@ -69,6 +69,7 @@ export default function JoinModal({
         value={description}
         onChange={onChangeValue}
       />
+      <UploadBox />
       <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
     </CustomModal>
   );
