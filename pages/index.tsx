@@ -4,14 +4,19 @@ import Image from "next/image";
 import styled from "styled-components";
 import { extractLinearGradientParamsFromTransform } from "@figma-plugin/helpers";
 import Header from "../components/Header";
-
+import JoinModal from "../components/JoinModal";
+import { useState, useEffect } from "react";
 const Home: NextPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    setIsModalOpen(true);
+  }, []);
   return (
     <Wrapper>
-      {/* <Sidebar /> */}
       <MainContainer>
         <Header />
         {/* <Main /> */}
+        <JoinModal isOpen={isModalOpen} />
       </MainContainer>
     </Wrapper>
   );
