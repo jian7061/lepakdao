@@ -6,17 +6,18 @@ import { extractLinearGradientParamsFromTransform } from "@figma-plugin/helpers"
 import Header from "../components/Header";
 import JoinModal from "../components/JoinModal";
 import { useState, useEffect } from "react";
+import Main from "../components/Main";
 const Home: NextPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   useEffect(() => {
     setIsModalOpen(true);
   }, []);
+  const onClose = () => {};
   return (
     <Wrapper>
       <MainContainer>
         <Header />
-        {/* <Main /> */}
-        <JoinModal isOpen={isModalOpen} />
+        <Main />
       </MainContainer>
     </Wrapper>
   );

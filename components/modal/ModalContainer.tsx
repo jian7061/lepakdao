@@ -8,7 +8,7 @@ export default function ModalContainer({
   children,
 }: PropsWithChildren<{
   title: string;
-  onCloseClick: (...args: any[]) => void;
+  onCloseClick?: (...args: any[]) => void;
 }>) {
   return (
     <Wrapper>
@@ -39,12 +39,6 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 1.25rem;
   margin: 0;
-`;
-
-const CancelButton = styled.div`
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const ContentContainer = styled.div`

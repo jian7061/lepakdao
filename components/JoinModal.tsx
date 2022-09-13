@@ -6,6 +6,8 @@ import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
+import ModalContainer from "./modal/ModalContainer";
+
 export default function JoinModal({
   isOpen,
   onClose,
@@ -38,42 +40,56 @@ export default function JoinModal({
     //   // await
     setButtonMsg("Join");
   };
+
   return (
-    <CustomModal title="Join Lepak DAO" isOpen={isOpen} onClose={onClose}>
-      <FormInputContainer>
+    <Wrapper>
+      <ModalContainer title="Join Lepak DAO">
+        <FormInputContainer>
+          <AmountFormInput
+            placeholder="Email"
+            value={email}
+            onChange={onChangeValue}
+          />
+          <AmountFormInput
+            placeholder="Name"
+            value={name}
+            onChange={onChangeValue}
+          />
+        </FormInputContainer>
+        <FormInputContainer>
+          <AmountFormInput
+            placeholder="Twitter"
+            value={twitter}
+            onChange={onChangeValue}
+          />
+          <AmountFormInput
+            placeholder="Telegram"
+            value={telegram}
+            onChange={onChangeValue}
+          />
+        </FormInputContainer>
         <AmountFormInput
-          placeholder="Email"
-          value={email}
+          placeholder="why do you want to join Lepak DAO"
+          value={description}
           onChange={onChangeValue}
         />
-        <AmountFormInput
-          placeholder="Name"
-          value={name}
-          onChange={onChangeValue}
-        />
-      </FormInputContainer>
-      <FormInputContainer>
-        <AmountFormInput
-          placeholder="Twitter"
-          value={twitter}
-          onChange={onChangeValue}
-        />
-        <AmountFormInput
-          placeholder="Telegram"
-          value={telegram}
-          onChange={onChangeValue}
-        />
-      </FormInputContainer>
-      <AmountFormInput
-        placeholder="why do you want to join Lepak DAO"
-        value={description}
-        onChange={onChangeValue}
-      />
-      <UploadBox title="Drop profile pic" />
-      <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
-    </CustomModal>
+        <UploadBox title="Drop profile pic" />
+        <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
+      </ModalContainer>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  background-color: black;
+  border-radius: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+`;
 
 const FormInputContainer = styled.div`
   display: flex;

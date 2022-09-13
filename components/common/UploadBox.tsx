@@ -38,7 +38,7 @@ export const UploadBox = ({ title }: { title: string }) => (
 );
 
 const Wrapper = styled.div`
-  border: 3px dotted black;
+  border: 3px dotted white;
   display: flex;
   flex-direction: column;
   align-items: center;
