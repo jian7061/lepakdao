@@ -6,7 +6,7 @@ import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
-export default function JoinModal({
+export default function AddLiveStreamModal({
   isOpen,
   onClose,
   id,
@@ -18,11 +18,10 @@ export default function JoinModal({
   const { address, isConnected, connector } = useAccount();
   const [value, setValue] = useState<any>();
   const [buttonMsg, setButtonMsg] = useState<any>("Join");
-  const [email, SetEmail] = useState<string>("");
-  const [name, SetName] = useState<string>("");
-  const [twitter, SetTwitter] = useState<string>("");
-  const [telegram, SetTelegram] = useState<string>("");
-  const [description, SetDescription] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [startTime, setStartTime] = useState<string>("");
+  const [hosts, setHosts] = useState<string>("");
+  const [description, setDescription] = useState<string>("");
 
   const [parsedValue, setParsedValue] = useState<any>();
   const onChangeValue = (e: any) => {
@@ -39,37 +38,30 @@ export default function JoinModal({
     setButtonMsg("Join");
   };
   return (
-    <CustomModal title="Join Lepak DAO" isOpen={isOpen} onClose={onClose}>
+    <CustomModal title="Add new livestream" isOpen={isOpen} onClose={onClose}>
+      <AmountFormInput
+        placeholder="Name"
+        value={name}
+        onChange={onChangeValue}
+      />
       <FormInputContainer>
         <AmountFormInput
-          placeholder="Email"
-          value={email}
+          placeholder="Start Time"
+          value={startTime}
           onChange={onChangeValue}
         />
         <AmountFormInput
-          placeholder="Name"
-          value={name}
-          onChange={onChangeValue}
-        />
-      </FormInputContainer>
-      <FormInputContainer>
-        <AmountFormInput
-          placeholder="Twitter"
-          value={twitter}
-          onChange={onChangeValue}
-        />
-        <AmountFormInput
-          placeholder="Telegram"
-          value={telegram}
+          placeholder="Hosts"
+          value={hosts}
           onChange={onChangeValue}
         />
       </FormInputContainer>
       <AmountFormInput
-        placeholder="why do you want to join Lepak DAO"
+        placeholder="Description"
         value={description}
         onChange={onChangeValue}
       />
-      <UploadBox title="Drop profile pic" />
+      <UploadBox title="Drop thumbnail" />
       <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
     </CustomModal>
   );

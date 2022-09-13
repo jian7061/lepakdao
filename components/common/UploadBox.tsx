@@ -28,11 +28,11 @@ const props = {
   },
 };
 
-export const UploadBox = () => (
+export const UploadBox = ({ title }: { title: string }) => (
   <Dragger {...props}>
     <Wrapper>
       <AiFillPicture />
-      <p>Click or drag file to this area to upload</p>
+      <p>{title}</p>
     </Wrapper>
   </Dragger>
 );
