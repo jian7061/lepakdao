@@ -19,7 +19,7 @@ export default function ConnectWallet() {
 
   useEffect(() => {
     if (isConnected) {
-      router.push("/dashboard");
+      // router.push("/dashboard");
       const checkRegistration = async () => {
         // await
         //setHasJoined(true)

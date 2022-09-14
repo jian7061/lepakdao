@@ -29,12 +29,13 @@ export const ProfileSidebar = () => {
 };
 
 const Wrapper = styled.div`
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
   width: 386px;
   height: 1208px;
+  margin: 0 55px;
+  background-color: #151419;
 `;
 
 const Logo = styled.h1``;
