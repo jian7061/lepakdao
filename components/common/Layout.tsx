@@ -1,14 +1,16 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import Header from "../components/Header";
 import { useState, useEffect } from "react";
-import Main from "../components/Main";
-const Home: NextPage = () => {
+import { ProfileSidebar } from "../ProfileSidebar";
+import { ContactSidebar } from "../ContactSidebar";
+
+export const Layout = ({ children }: { children: any }) => {
   return (
     <Wrapper>
       <MainContainer>
-        <Header />
-        <Main />
+        <ProfileSidebar />
+        {children}
+        <ContactSidebar />
       </MainContainer>
     </Wrapper>
   );
@@ -16,15 +18,12 @@ const Home: NextPage = () => {
 
 const Wrapper = styled.div`
   font-family: "Montserrat";
-  height: 100vh;
-  max-width: 100vw;
-  background-color: #4570d8;
-  color: white;
+  background-color: black;
+  color: #ffffff;
   display: grid;
 `;
 
 const MainContainer = styled.div`
   flex: 1;
+  display: flex;
 `;
-
-export default Home;

@@ -17,7 +17,6 @@ export default function Header({ account }: any) {
 }
 
 const Wrapper = styled.div`
-  font-family: "Montserrat";
   width: calc(100%);
   padding: 1rem 2rem;
   display: flex;

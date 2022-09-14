@@ -6,14 +6,14 @@ import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
+import { RiArrowDownSLine } from "react-icons/ri";
+
 export default function AddLiveStreamModal({
   isOpen,
   onClose,
-  id,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  id: any;
 }) {
   const { address, isConnected, connector } = useAccount();
   const [value, setValue] = useState<any>();

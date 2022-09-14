@@ -1,14 +1,17 @@
 import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 import styled from "styled-components";
+import { extractLinearGradientParamsFromTransform } from "@figma-plugin/helpers";
 import Header from "../components/Header";
-import { useState, useEffect } from "react";
-import Main from "../components/Main";
-const Home: NextPage = () => {
+import JoinModal from "../components/JoinModal";
+
+const Join: NextPage = () => {
   return (
     <Wrapper>
       <MainContainer>
         <Header />
-        <Main />
+        <JoinModal isOpen onClose={() => {}} id="1" />
       </MainContainer>
     </Wrapper>
   );
@@ -20,11 +23,11 @@ const Wrapper = styled.div`
   max-width: 100vw;
   background-color: #4570d8;
   color: white;
+  padding: 0 2rem;
   display: grid;
 `;
-
 const MainContainer = styled.div`
   flex: 1;
 `;
 
-export default Home;
+export default Join;

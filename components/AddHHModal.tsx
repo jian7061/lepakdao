@@ -9,11 +9,9 @@ import { UploadBox } from "./common/UploadBox";
 export default function AddHHModal({
   isOpen,
   onClose,
-  id,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  id: any;
 }) {
   const { address, isConnected, connector } = useAccount();
   const [value, setValue] = useState<any>();

@@ -21,7 +21,6 @@ export default function ModalContainer({
 }
 
 const Wrapper = styled.div`
-  font-family: "Open Sans", sans-serif;
   min-width: 350px;
   display: flex;
   flex-direction: column;
