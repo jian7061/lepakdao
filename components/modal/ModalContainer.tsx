@@ -29,18 +29,16 @@ const Wrapper = styled.div`
 
 const TitleContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.25rem;
+  margin: 25px 0 65px 0;
 `;
 
 const Title = styled.p`
   font-weight: 600;
-  font-size: 1.25rem;
-  margin: 0;
+  font-size: 40px;
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;

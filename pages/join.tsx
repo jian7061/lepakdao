@@ -9,8 +9,8 @@ import JoinModal from "../components/JoinModal";
 const Join: NextPage = () => {
   return (
     <Wrapper>
+      <Header />
       <MainContainer>
-        <Header />
         <JoinModal isOpen onClose={() => {}} id="1" />
       </MainContainer>
     </Wrapper>
@@ -24,10 +24,11 @@ const Wrapper = styled.div`
   background-color: #4570d8;
   color: white;
   padding: 0 2rem;
-  display: grid;
 `;
 const MainContainer = styled.div`
-  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Join;

@@ -46,6 +46,7 @@ export default function JoinModal({
       <ModalContainer title="Join Lepak DAO">
         <FormInputContainer>
           <AmountFormInput
+            style={{ marginRight: "46px" }}
             placeholder="Email"
             value={email}
             onChange={onChangeValue}
@@ -58,6 +59,7 @@ export default function JoinModal({
         </FormInputContainer>
         <FormInputContainer>
           <AmountFormInput
+            style={{ marginRight: "46px" }}
             placeholder="Twitter"
             value={twitter}
             onChange={onChangeValue}
@@ -69,6 +71,7 @@ export default function JoinModal({
           />
         </FormInputContainer>
         <AmountFormInput
+          style={{ width: "564px", height: "135px" }}
           placeholder="why do you want to join Lepak DAO"
           value={description}
           onChange={onChangeValue}
@@ -81,14 +84,15 @@ export default function JoinModal({
 }
 
 const Wrapper = styled.div`
-  background-color: black;
-  border-radius: 1rem;
+  background-color: #151419;
+  border-radius: 25px;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 2rem;
+  width: 707px;
+  height: 999px;
 `;
 
 const FormInputContainer = styled.div`
@@ -96,5 +100,5 @@ const FormInputContainer = styled.div`
 `;
 
 const AmountFormInput = styled(FormInput)`
-  margin-bottom: 0.5rem;
+  margin-bottom: 44px;
 `;
