@@ -17,7 +17,10 @@ export const Proposal = ({ proposal }: { proposal: ProposalProps }) => {
         <ProfilePicture src={proposal.image} />
       </ProfilePictureWrapper>
       <Role>{proposal.role}</Role>
-      <Desc>{proposal.desc.slice(0, 60)}</Desc>
+      <Desc>
+        <p>{proposal.desc.slice(0, 80)}</p>
+        <p>{proposal.desc.slice(81)}</p>
+      </Desc>
       <Date>{proposal.date}</Date>
       <StyledButton>Approve</StyledButton>
     </Wrapper>
@@ -26,8 +29,8 @@ export const Proposal = ({ proposal }: { proposal: ProposalProps }) => {
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   color: #595665;
   font-size: 15px;
   padding: 20px 40px 20px 20px;
