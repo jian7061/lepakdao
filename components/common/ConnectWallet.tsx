@@ -56,6 +56,6 @@ const Wrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  width: 261px;
+  width: 294px;
   height: 59px;
 `;
