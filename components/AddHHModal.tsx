@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { BigNumber, utils } from "ethers";
 import { useState } from "react";
 import { CustomModal } from "./modal/index";
-import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
+import { Button } from "./common/Button";
+
 export default function AddHHModal({
   isOpen,
   onClose,
@@ -40,6 +41,7 @@ export default function AddHHModal({
     <CustomModal title="Add new hh" isOpen={isOpen} onClose={onClose}>
       <FormInputContainer>
         <AmountFormInput
+          style={{ marginRight: "46px" }}
           placeholder="Name"
           value={name}
           onChange={onChangeValue}
@@ -52,6 +54,7 @@ export default function AddHHModal({
       </FormInputContainer>
       <FormInputContainer>
         <AmountFormInput
+          style={{ marginRight: "46px" }}
           placeholder="Duration"
           value={duration}
           onChange={onChangeValue}
@@ -63,12 +66,13 @@ export default function AddHHModal({
         />
       </FormInputContainer>
       <AmountFormInput
+        style={{ width: "564px", height: "135px" }}
         placeholder="Description"
         value={description}
         onChange={onChangeValue}
       />
       <UploadBox title="Drop Images" />
-      <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
+      <Button onClick={onDonateSubmit}>{buttonMsg}</Button>
     </CustomModal>
   );
 }
@@ -78,5 +82,5 @@ const FormInputContainer = styled.div`
 `;
 
 const AmountFormInput = styled(FormInput)`
-  margin-bottom: 0.5rem;
+  margin-bottom: 44px;
 `;

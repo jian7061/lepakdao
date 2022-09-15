@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { BigNumber, utils } from "ethers";
 import { useState } from "react";
 import { CustomModal } from "./modal/index";
-import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { Button } from "./common/Button";
 
 export default function AddLiveStreamModal({
   isOpen,
@@ -40,12 +40,14 @@ export default function AddLiveStreamModal({
   return (
     <CustomModal title="Add new livestream" isOpen={isOpen} onClose={onClose}>
       <AmountFormInput
+        style={{ width: "564px" }}
         placeholder="Name"
         value={name}
         onChange={onChangeValue}
       />
       <FormInputContainer>
         <AmountFormInput
+          style={{ marginRight: "46px" }}
           placeholder="Start Time"
           value={startTime}
           onChange={onChangeValue}
@@ -57,12 +59,13 @@ export default function AddLiveStreamModal({
         />
       </FormInputContainer>
       <AmountFormInput
+        style={{ width: "564px", height: "135px" }}
         placeholder="Description"
         value={description}
         onChange={onChangeValue}
       />
       <UploadBox title="Drop thumbnail" />
-      <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
+      <Button onClick={onDonateSubmit}>{buttonMsg}</Button>
     </CustomModal>
   );
 }
@@ -72,5 +75,5 @@ const FormInputContainer = styled.div`
 `;
 
 const AmountFormInput = styled(FormInput)`
-  margin-bottom: 0.5rem;
+  margin-bottom: 44px;
 `;
