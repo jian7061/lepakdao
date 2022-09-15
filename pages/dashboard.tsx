@@ -3,6 +3,38 @@ import styled from "styled-components";
 import { InfoTile } from "../components/common/InfoTile";
 import { InfoPanel } from "../components/common/InfoPanel";
 import { Layout } from "../components/common/Layout";
+import { Proposal } from "../components/Proposal";
+
+const proposals = [
+  {
+    name: "Jian Kim",
+    role: "Member",
+    image: "https://source.unsplash.com/user/c_v_r",
+    desc: "Open new long term hh in Kuala Lumpur lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    date: "23 Sept",
+  },
+  {
+    name: "Jian Kim",
+    role: "Member",
+    image: "https://source.unsplash.com/user/c_v_r",
+    desc: "Open new long term hh in Kuala Lumpur lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    date: "23 Sept",
+  },
+  {
+    name: "Jian Kim",
+    role: "Member",
+    image: "https://source.unsplash.com/user/c_v_r",
+    desc: "Open new long term hh in Kuala Lumpur lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    date: "23 Sept",
+  },
+  {
+    name: "Jian Kim",
+    role: "Member",
+    image: "https://source.unsplash.com/user/c_v_r",
+    desc: "Open new long term hh in Kuala Lumpur lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+    date: "23 Sept",
+  },
+];
 
 const Dashboard: NextPage = () => {
   return (
@@ -108,7 +140,11 @@ const Dashboard: NextPage = () => {
         <InfoPanel
           title="Vote on proposals"
           size={{ width: "1215px", height: "472px" }}
-        />
+        >
+          {proposals.map((proposal) => {
+            return <Proposal proposal={proposal} />;
+          })}
+        </InfoPanel>
       </MainContainer>
     </Layout>
   );

@@ -21,9 +21,8 @@ const Wrapper = styled.div`
   font-family: "Montserrat";
   height: 100vh;
   max-width: 100vw;
-  background-color: #4570d8;
+  background-color: black;
   color: white;
-  padding: 0 2rem;
 `;
 const MainContainer = styled.div`
   display: flex;

@@ -7,11 +7,9 @@ import { ContactSidebar } from "../ContactSidebar";
 export const Layout = ({ children }: { children: any }) => {
   return (
     <Wrapper>
-      <MainContainer>
-        <ProfileSidebar />
-        {children}
-        <ContactSidebar />
-      </MainContainer>
+      <ProfileSidebar />
+      {children}
+      <ContactSidebar />
     </Wrapper>
   );
 };
@@ -19,11 +17,9 @@ export const Layout = ({ children }: { children: any }) => {
 const Wrapper = styled.div`
   font-family: "Montserrat";
   background-color: black;
+  height: 100vh;
+  max-width: 100vw;
   color: #ffffff;
-  display: grid;
-`;
-
-const MainContainer = styled.div`
-  flex: 1;
   display: flex;
+  padding-top: 50px;
 `;

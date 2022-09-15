@@ -38,11 +38,11 @@ export default function ConnectWallet() {
   return (
     <Wrapper>
       {isConnected ? (
-        <Button onClick={() => disconnect()}>
+        <StyledButton onClick={() => disconnect()}>
           {address?.slice(0, 5)}...{address?.slice(-4)}
-        </Button>
+        </StyledButton>
       ) : (
-        <Button onClick={handleConnect}>Connect Wallet</Button>
+        <StyledButton onClick={handleConnect}>Connect Wallet</StyledButton>
       )}
     </Wrapper>
   );
@@ -53,4 +53,9 @@ const Wrapper = styled.div`
   align-items: center;
   font-weight: bold;
   font-size: 18px;
+`;
+
+const StyledButton = styled(Button)`
+  width: 261px;
+  height: 59px;
 `;

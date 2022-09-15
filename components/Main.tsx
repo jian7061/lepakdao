@@ -12,7 +12,7 @@ export default function Main() {
         more!
       </Desc>
       <Link href="/join">
-        <ButtonContainer>Join now!</ButtonContainer>
+        <StyledButton>Join now!</StyledButton>
       </Link>
       <SponsorsContainer>
         <Sponsor />
@@ -31,10 +31,12 @@ const Title = styled.div``;
 
 const Desc = styled.div``;
 
-const ButtonContainer = styled(Button)`
-  width: 200px;
+const StyledButton = styled(Button)`
+  width: 404px;
+  height: 92px;
+  font-size: 30px;
+  font-weight: 600;
 `;
-
 const SponsorsContainer = styled.div``;
 
 const Sponsor = styled.div``;
