@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Button } from "./common/Button";
 import { HiPlus } from "react-icons/hi";
 import AddLiveStreamModal from "./AddLiveStreamModal";
 import AddHHModal from "./AddHHModal";
@@ -9,32 +8,51 @@ import { PrimaryButton } from "./common/PrimaryButton";
 import { HackerHouse } from "./HackerHouse";
 import { Meeting } from "./Meeting";
 
-export const ContactSidebar = () => {
+export type HHProps = {
+  name: string;
+  duration: string;
+};
+
+export type MeetingProps = {
+  name: string;
+  duration: string;
+  description: string;
+};
+
+export const ContactSidebar = (admin: any) => {
   const [isStreamClicked, setIsStreamClicked] = useState(false);
   const [isHHClicked, setIsHHClicked] = useState(false);
-  const hackerHouses = [
-    {
-      name: "Kuala Lumpur HH 🌇",
-      duration: "Sept 28 2022 - Dec 28 2022",
-    },
-    {
-      name: "Bali HH 🏝",
-      duration: "Oct 28 2022 - Feb 28 2023",
-    },
-  ];
+  const [hackerHouses, setHackerHouses] = useState<HHProps[]>([]);
+  const [meetings, setMeetings] = useState<MeetingProps[]>([]);
 
-  const meetings = [
-    {
-      name: "Board meeting",
-      duration: "Sept 28 2022 - Dec 28 2022",
-      description: "You have been invited to attend a meeting of Moderators.",
-    },
-    {
-      name: "Community meeting",
-      duration: "Sept 28 2022 - Dec 28 2022",
-      description: "You have been invited to attend a meeting for Community.",
-    },
-  ];
+  useEffect(() => {
+    setHackerHouses([
+      {
+        name: "Kuala Lumpur HH 🌇",
+        duration: "Sept 28 2022 - Dec 28 2022",
+      },
+      {
+        name: "Bali HH 🏝",
+        duration: "Oct 28 2022 - Feb 28 2023",
+      },
+    ]);
+  }, []);
+
+  useEffect(() => {
+    setMeetings([
+      {
+        name: "Board meeting",
+        duration: "Sept 28 2022 - Dec 28 2022",
+        description: "You have been invited to attend a meeting of Moderators.",
+      },
+      {
+        name: "Community meeting",
+        duration: "Sept 28 2022 - Dec 28 2022",
+        description: "You have been invited to attend a meeting for Community.",
+      },
+    ]);
+  }, []);
+
   return (
     <Wrapper>
       <ConnectWallet />
@@ -42,9 +60,11 @@ export const ContactSidebar = () => {
         <HeightWrapper>
           <TitleContainer>
             <Title>Hacker Houses</Title>
-            <IconContainer onClick={() => setIsStreamClicked(true)}>
-              <HiPlus />
-            </IconContainer>
+            {admin && (
+              <IconContainer onClick={() => setIsStreamClicked(true)}>
+                <HiPlus />
+              </IconContainer>
+            )}
           </TitleContainer>
           {hackerHouses.map((hackerHouse) => {
             return <HackerHouse hackerHouse={hackerHouse} />;
@@ -53,9 +73,11 @@ export const ContactSidebar = () => {
         <HeightWrapper>
           <TitleContainer>
             <Title>Video calls</Title>
-            <IconContainer onClick={() => setIsHHClicked(true)}>
-              <HiPlus />
-            </IconContainer>
+            {admin && (
+              <IconContainer onClick={() => setIsHHClicked(true)}>
+                <HiPlus />
+              </IconContainer>
+            )}
           </TitleContainer>
           {meetings.map((meeting) => {
             return <Meeting meeting={meeting} />;

@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import { HiMinus } from "react-icons/hi";
 import { useState } from "react";
+import { MeetingProps } from "./ContactSidebar";
 
-type MeetingProps = {
-  name: string;
-  duration: string;
-  description: string;
-};
 export const Meeting = ({ meeting }: { meeting: MeetingProps }) => {
   const [isRemoveClicked, setIsRemoveClicked] = useState(false);
   return (

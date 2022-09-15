@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 type SocialMediaProps = {
   name: string;
@@ -18,7 +19,7 @@ export default function Profile({ user }: { user: UserProps }) {
     <Wrapper>
       <MainContainer>
         <ProfilePictureWrapper>
-          <ProfilePicture src={user.image} />
+          <Image src={user.image} width="75px" height="75px" />
         </ProfilePictureWrapper>
         <NameContainer>
           <Name>{user.name}</Name>
@@ -63,8 +64,6 @@ const Divider = styled.div`
 
 const ProfilePictureWrapper = styled.div`
   display: flex;
-  width: 75px;
-  height: 75px;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;

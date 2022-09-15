@@ -5,11 +5,12 @@ import { ProfileSidebar } from "../ProfileSidebar";
 import { ContactSidebar } from "../ContactSidebar";
 
 export const Layout = ({ children }: { children: any }) => {
+  const [admin, setAdmin] = useState(true);
   return (
     <Wrapper>
       <ProfileSidebar />
       {children}
-      <ContactSidebar />
+      <ContactSidebar admin={admin} />
     </Wrapper>
   );
 };

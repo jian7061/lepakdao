@@ -4,6 +4,7 @@ import { InfoTile } from "../components/common/InfoTile";
 import { InfoPanel } from "../components/common/InfoPanel";
 import { Layout } from "../components/common/Layout";
 import { Proposal } from "../components/Proposal";
+import { useState } from "react";
 
 const proposals = [
   {
@@ -37,6 +38,8 @@ const proposals = [
 ];
 
 const Dashboard: NextPage = () => {
+  const [admin, setAdmin] = useState(true);
+
   return (
     <Layout>
       <MainContainer>
@@ -138,6 +141,7 @@ const Dashboard: NextPage = () => {
           />
         </Row>
         <InfoPanel
+          admin={admin}
           title="Vote on proposals"
           size={{ width: "1215px", height: "472px" }}
         >

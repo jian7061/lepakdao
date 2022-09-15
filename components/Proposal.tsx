@@ -14,7 +14,7 @@ export const Proposal = ({ proposal }: { proposal: ProposalProps }) => {
   return (
     <Wrapper>
       <ProfilePictureWrapper>
-        <ProfilePicture src={proposal.image} />
+        <Image src={proposal.image} width="54px" height="54px" />
       </ProfilePictureWrapper>
       <Role>{proposal.role}</Role>
       <Desc>
@@ -38,8 +38,6 @@ const Wrapper = styled.div`
 
 const ProfilePictureWrapper = styled.div`
   display: flex;
-  width: 54px;
-  height: 54px;
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
