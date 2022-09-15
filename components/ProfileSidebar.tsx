@@ -69,6 +69,7 @@ const Wrapper = styled.div`
   margin: 0 55px;
   border-radius: 30px;
   background-color: #151419;
+  border: 2px solid #13131b;
 `;
 
 const LogoContainer = styled.div`

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import styled from "styled-components";
 import { InfoTile } from "../components/common/InfoTile";
 import { InfoPanel } from "../components/common/InfoPanel";
-import { Layout } from "../components/common/Layout";
+import { CustomLayout } from "../components/common/CustomLayout";
 import { Proposal } from "../components/Proposal";
 import { useState } from "react";
 import { RevenueChart } from "../components/RevenueChart";
@@ -42,7 +42,7 @@ const Dashboard: NextPage = () => {
   const [admin, setAdmin] = useState(true);
 
   return (
-    <Layout>
+    <CustomLayout>
       <MainContainer>
         <UserName>Gm, Jian!</UserName>
         <Row>
@@ -160,7 +160,7 @@ const Dashboard: NextPage = () => {
           })}
         </InfoPanel>
       </MainContainer>
-    </Layout>
+    </CustomLayout>
   );
 };
 

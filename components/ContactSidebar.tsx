@@ -108,6 +108,7 @@ const MainContainer = styled.div`
   margin-top: 59px;
   width: 294px;
   height: 1098px;
+  border: 2px solid #13131b;
   border-radius: 30px;
   background-color: #151419;
 `;

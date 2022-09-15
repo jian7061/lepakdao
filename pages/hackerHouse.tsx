@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
-import { Layout } from "../components/common/Layout";
+import { CustomLayout } from "../components/common/CustomLayout";
 import { Button } from "../components/common/Button";
 import Image from "next/image";
 import { Proposal } from "../components/Proposal";
@@ -46,7 +46,7 @@ const proposals = [
 const HackerHouse: NextPage = () => {
   const [admin, setAdmin] = useState(true);
   return (
-    <Layout>
+    <CustomLayout>
       <MainContainer>
         <PictureWrapper>
           <Image src={hackerHouse.image} width="1083px" height="453px" />
@@ -73,7 +73,7 @@ const HackerHouse: NextPage = () => {
           })}
         </ProposalContainer>
       </MainContainer>
-    </Layout>
+    </CustomLayout>
   );
 };
 
@@ -82,8 +82,8 @@ const MainContainer = styled.div`
   width: 1151px;
   height: 1208px;
   border-radius: 30px;
-  box-shadow: 12px 12px 2px 1px #13131b;
   padding: 30px;
+  border: 2px solid #13131b;
 `;
 
 const PictureWrapper = styled.div`

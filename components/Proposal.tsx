@@ -62,12 +62,7 @@ const ProfilePictureWrapper = styled.div`
   border-radius: 50%;
   overflow: hidden;
   align-items: center;
-  background: #f2f2f2;
   margin-right: 35px;
-`;
-
-const ProfilePicture = styled.img`
-  width: 100%;
 `;
 
 const Role = styled.div``;

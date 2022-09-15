@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import { ProfileSidebar } from "../ProfileSidebar";
 import { ContactSidebar } from "../ContactSidebar";
 
-export const Layout = ({ children }: { children: any }) => {
+export const CustomLayout = ({ children }: { children: any }) => {
   const [admin, setAdmin] = useState(true);
   return (
     <Wrapper>
+      <ProfileSidebar />
       {children}
+      <ContactSidebar admin={admin} />
     </Wrapper>
   );
 };
