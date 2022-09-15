@@ -2,15 +2,20 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   color: #ffffff;
-  background-color: navy;
   border-radius: 10px;
   border: none;
   text-align: center;
+  font-size: 25px;
   padding: 10px;
+  width: 316px;
+  height: 72px;
+  background: rgb(70, 112, 216);
+  background: linear-gradient(
+    90deg,
+    rgba(70, 112, 216, 1) 20%,
+    rgba(166, 18, 255, 1) 80%
+  );
   &:hover {
     cursor: pointer;
-    background-color: #ffffff;
-    color: navy;
-    border: 1px solid navy;
   }
 `;

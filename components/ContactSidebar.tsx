@@ -5,6 +5,7 @@ import { HiPlus } from "react-icons/hi";
 import AddLiveStreamModal from "./AddLiveStreamModal";
 import AddHHModal from "./AddHHModal";
 import ConnectWallet from "./common/ConnectWallet";
+import { PrimaryButton } from "./common/PrimaryButton";
 
 export const ContactSidebar = () => {
   const [isStreamClicked, setIsStreamClicked] = useState(false);
@@ -30,7 +31,7 @@ export const ContactSidebar = () => {
           isOpen={isHHClicked}
           onClose={() => setIsHHClicked(false)}
         />
-        <Button>Log out</Button>
+        <PrimaryButton>Log out</PrimaryButton>
       </MainContainer>
     </Wrapper>
   );

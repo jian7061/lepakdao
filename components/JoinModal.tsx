@@ -2,12 +2,11 @@ import styled from "styled-components";
 import { BigNumber, utils } from "ethers";
 import { useState } from "react";
 import { CustomModal } from "./modal/index";
-import { PrimaryButton } from "./common/PrimaryButton";
 import { FormInput } from "./common/FormInput";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { UploadBox } from "./common/UploadBox";
 import ModalContainer from "./modal/ModalContainer";
-
+import { Button } from "./common/Button";
 export default function JoinModal({
   isOpen,
   onClose,
@@ -77,7 +76,7 @@ export default function JoinModal({
           onChange={onChangeValue}
         />
         <UploadBox title="Drop profile pic" />
-        <PrimaryButton onClick={onDonateSubmit}>{buttonMsg}</PrimaryButton>
+        <Button onClick={onDonateSubmit}>{buttonMsg}</Button>
       </ModalContainer>
     </Wrapper>
   );
