@@ -1,21 +1,15 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
-import { extractLinearGradientParamsFromTransform } from "@figma-plugin/helpers";
-import { ProfileSidebar } from "../components/ProfileSidebar";
-import ConnectWallet from "../components/common/ConnectWallet";
 import { InfoTile } from "../components/common/InfoTile";
 import { InfoPanel } from "../components/common/InfoPanel";
-import { ContactSidebar } from "../components/ContactSidebar";
 import { Layout } from "../components/common/Layout";
 
 const Dashboard: NextPage = () => {
   return (
     <Layout>
       <MainContainer>
-        <UserName>Gm,Jian</UserName>
-        <InfoContainer>
+        <UserName>Gm, Jian!</UserName>
+        <Row>
           <InfoTile
             image={
               <svg
@@ -94,9 +88,14 @@ const Dashboard: NextPage = () => {
           <InfoPanel
             title="New members"
             size={{ width: "432px", height: "196px" }}
-          />
-        </InfoContainer>
-        <InfoContainer>
+          >
+            <Members>
+              <p>75</p>
+              <div>+27%</div>
+            </Members>
+          </InfoPanel>
+        </Row>
+        <Row>
           <InfoPanel
             title="Watch live"
             size={{ width: "340px", height: "332px" }}
@@ -105,7 +104,7 @@ const Dashboard: NextPage = () => {
             title="DAO revenue"
             size={{ width: "830px", height: "332px" }}
           />
-        </InfoContainer>
+        </Row>
         <InfoPanel
           title="Vote on proposals"
           size={{ width: "1215px", height: "472px" }}
@@ -119,9 +118,35 @@ const MainContainer = styled.div`
   margin-right: 60px;
 `;
 
-const UserName = styled.div``;
+const UserName = styled.div`
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 61px;
+`;
 
-const InfoContainer = styled.div`
+const Row = styled.div`
+  margin-bottom: 50px;
   display: flex;
 `;
+
+const Members = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  p {
+    font-size: 55px;
+  }
+  div {
+    background-color: #a5eec2;
+    width: 122px;
+    height: 37px;
+    border-radius: 5px;
+    color: #249651;
+    text-align: center;
+    font-size: 15px;
+    line-height: 37px;
+  }
+`;
+
 export default Dashboard;

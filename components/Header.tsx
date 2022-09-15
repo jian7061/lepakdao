@@ -33,5 +33,5 @@ const LogoContainer = styled.div`
 
 const Logo = styled.a`
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 600;
 `;

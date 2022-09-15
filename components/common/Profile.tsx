@@ -16,13 +16,16 @@ export type UserProps = {
 export default function Profile({ user }: { user: UserProps }) {
   return (
     <Wrapper>
-      <ProfilePictureWrapper>
-        <ProfilePicture src={user.image} />
-      </ProfilePictureWrapper>
-      <NameContainer>
-        <Name>{user.name}</Name>
-        <Role>{user.role}</Role>
-      </NameContainer>
+      <MainContainer>
+        <ProfilePictureWrapper>
+          <ProfilePicture src={user.image} />
+        </ProfilePictureWrapper>
+        <NameContainer>
+          <Name>{user.name}</Name>
+          <Role>{user.role}</Role>
+        </NameContainer>
+      </MainContainer>
+      <Divider />
       <SocialMediaContainer>
         {user.socialMedia.map((item) => (
           <SocialMediaItem
@@ -41,17 +44,33 @@ export default function Profile({ user }: { user: UserProps }) {
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MainContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+`;
+
+const Divider = styled.div`
+  border: 1px solid #2b2b38;
+  width: 316px;
+  margin: 51px auto 93px auto;
 `;
 
 const ProfilePictureWrapper = styled.div`
   display: flex;
-  width: 208px;
-  height: 208px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   overflow: hidden;
   align-items: center;
   background: #f2f2f2;
+  margin-right: 35px;
 `;
 
 const ProfilePicture = styled.img`
@@ -62,9 +81,16 @@ const NameContainer = styled.div`
   flex-direction: column;
 `;
 
-const Name = styled.div``;
+const Name = styled.div`
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+`;
 
-const Role = styled.div``;
+const Role = styled.div`
+  color: #595665;
+  font-size: 15px;
+`;
 
 const SocialMediaContainer = styled.div`
   display: flex;
@@ -72,8 +98,9 @@ const SocialMediaContainer = styled.div`
 `;
 
 const SocialMediaItem = styled.div`
-  font-size: 1.3rem;
-  margin-right: 1.3rem;
+  color: #6868b4;
+  font-size: 37px;
+  margin-right: 37px;
   &:hover {
     cursor: pointer;
   }
