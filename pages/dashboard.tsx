@@ -5,6 +5,7 @@ import { InfoPanel } from "../components/common/InfoPanel";
 import { Layout } from "../components/common/Layout";
 import { Proposal } from "../components/Proposal";
 import { useState } from "react";
+import { RevenueChart } from "../components/RevenueChart";
 
 const proposals = [
   {
@@ -138,7 +139,9 @@ const Dashboard: NextPage = () => {
           <InfoPanel
             title="DAO revenue"
             size={{ width: "830px", height: "332px" }}
-          />
+          >
+            <RevenueChart />
+          </InfoPanel>
         </Row>
         <InfoPanel
           admin={admin}
