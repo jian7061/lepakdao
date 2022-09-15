@@ -149,7 +149,14 @@ const Dashboard: NextPage = () => {
           size={{ width: "1215px", height: "472px" }}
         >
           {proposals.map((proposal) => {
-            return <Proposal proposal={proposal} />;
+            return (
+              <Proposal
+                action={{
+                  action: "approve",
+                }}
+                proposal={proposal}
+              />
+            );
           })}
         </InfoPanel>
       </MainContainer>

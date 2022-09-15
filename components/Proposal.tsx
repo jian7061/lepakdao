@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { PrimaryButton } from "./common/PrimaryButton";
+import { useState } from "react";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
 export type ProposalProps = {
   name: string;
@@ -10,7 +12,19 @@ export type ProposalProps = {
   date: string;
 };
 
-export const Proposal = ({ proposal }: { proposal: ProposalProps }) => {
+type ProposalAction = {
+  action: "approve" | "add";
+};
+
+export const Proposal = ({
+  proposal,
+  action,
+}: {
+  proposal: ProposalProps;
+  action: ProposalAction;
+}) => {
+  const [isChecked, setIsChecked] = useState(true);
+
   return (
     <Wrapper>
       <ProfilePictureWrapper>
@@ -18,11 +32,17 @@ export const Proposal = ({ proposal }: { proposal: ProposalProps }) => {
       </ProfilePictureWrapper>
       <Role>{proposal.role}</Role>
       <Desc>
-        <p>{proposal.desc.slice(0, 80)}</p>
-        <p>{proposal.desc.slice(81)}</p>
+        <p>{proposal.desc.slice(0, 60)}</p>
+        <p>{proposal.desc.slice(61, 120)}</p>
       </Desc>
       <Date>{proposal.date}</Date>
-      <StyledButton>Approve</StyledButton>
+      {action == "approve" ? (
+        <StyledButton>Approve</StyledButton>
+      ) : (
+        <IconContainer>
+          {isChecked ? <BsFillCheckCircleFill /> : <CheckBox />}
+        </IconContainer>
+      )}
     </Wrapper>
   );
 };
@@ -61,4 +81,18 @@ const StyledButton = styled(PrimaryButton)`
   height: 37px;
   font-size: 15px;
   line-height: 0px;
+`;
+
+const IconContainer = styled.div`
+  svg {
+    color: #6868b4;
+    font-size: 37px;
+  }
+`;
+
+const CheckBox = styled.div`
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  border: 3px solid #6868b4;
 `;

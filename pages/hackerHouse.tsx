@@ -62,7 +62,14 @@ const HackerHouse: NextPage = () => {
         <ProposalContainer>
           <StyledButton>Add</StyledButton>
           {proposals.map((proposal) => {
-            return <Proposal proposal={proposal} />;
+            return (
+              <Proposal
+                action={{
+                  action: "add",
+                }}
+                proposal={proposal}
+              />
+            );
           })}
         </ProposalContainer>
       </MainContainer>
