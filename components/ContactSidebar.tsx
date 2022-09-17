@@ -138,7 +138,7 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 17px;
   }
   &:hover {

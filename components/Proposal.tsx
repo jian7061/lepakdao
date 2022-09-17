@@ -80,7 +80,7 @@ const StyledButton = styled(PrimaryButton)`
 
 const IconContainer = styled.div`
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 37px;
   }
 `;
@@ -89,5 +89,5 @@ const CheckBox = styled.div`
   width: 37px;
   height: 37px;
   border-radius: 50%;
-  border: 3px solid #6868b4;
+  border: 3px solid ${({ theme }) => theme.colors.themeColor};
 `;

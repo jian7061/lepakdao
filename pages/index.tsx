@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   font-family: "Montserrat";
   height: 100vh;
   max-width: 100vw;
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.black};
   color: #ffffff;
 `;
 
