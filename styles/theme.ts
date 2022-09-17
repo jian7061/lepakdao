@@ -27,7 +27,11 @@ const common = {
   `,
 };
 
+<<<<<<< HEAD
 const theme = {
+=======
+export const theme = {
+>>>>>>> cf9f6ae6d707a491601737340814c96566e37ca6
   colors,
   common,
 };

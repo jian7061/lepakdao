@@ -24,7 +24,11 @@ export const ChatTile = ({ direction }: { direction: Direction }) => {
         </Wrapper>
       ) : (
         <Wrapper style={{ justifyContent: "flex-end" }}>
-          <MessageBox style={{ backgroundColor: "#6868B4" }}>
+          <MessageBox
+            style={{
+              backgroundColor: "${({ theme }) => theme.colors.themeColor}",
+            }}
+          >
             <Message>Long term hh in Kuala orem iem ipsum lorem ipsum </Message>
           </MessageBox>
           <Picture>
