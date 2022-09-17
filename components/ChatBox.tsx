@@ -20,8 +20,8 @@ const Wrapper = styled.div`
   width: 423px;
   height: 1098px;
   border-radius: 30px;
-  border: 2px solid #13131b;
-  background-color: #151419;
+  border: 2px solid ${({ theme }) => theme.colors.strokeColor};
+  background-color: ${({ theme }) => theme.colors.bgColor};
   margin-top: 50px;
 `;
 

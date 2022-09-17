@@ -54,7 +54,7 @@ const Picture = styled.div`
 `;
 
 const MessageBox = styled.div`
-  background-color: #232227;
+  background-color: ${({ theme }) => theme.colors.inputBg};
   width: 258px;
   border-radius: 10px;
   padding: 5px;
@@ -62,13 +62,13 @@ const MessageBox = styled.div`
 `;
 const Name = styled.div`
   font-size: 15px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   margin-bottom: 10px;
   padding: 5px;
 `;
 
 const Message = styled.div`
   font-size: 15px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   padding: 5px;
 `;

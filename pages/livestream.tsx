@@ -94,13 +94,13 @@ const IconContainer = styled.div`
 
 const Date = styled.div`
   font-size: 25px;
-  color: #595665;
+  color: ${({ theme }) => theme.colors.textColor};
   margin-bottom: 40px;
 `;
 
 const Desc = styled.div`
   font-size: 25px;
-  color: #595665;
+  color: ${({ theme }) => theme.colors.textColor};
 `;
 
 const ChatBoxContainer = styled.div`

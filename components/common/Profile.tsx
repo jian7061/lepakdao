@@ -87,7 +87,7 @@ const Name = styled.div`
 `;
 
 const Role = styled.div`
-  color: #595665;
+  color: ${({ theme }) => theme.colors.textColor};
   font-size: 15px;
 `;
 
@@ -97,7 +97,7 @@ const SocialMediaContainer = styled.div`
 `;
 
 const SocialMediaItem = styled.div`
-  color: #6868b4;
+  color: ${({ theme }) => theme.colors.themeColor};
   font-size: 37px;
   margin-right: 37px;
   &:hover {

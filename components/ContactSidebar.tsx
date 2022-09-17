@@ -108,9 +108,9 @@ const MainContainer = styled.div`
   margin-top: 59px;
   width: 294px;
   height: 1098px;
-  border: 2px solid #13131b;
+  border: 2px solid ${({ theme }) => theme.colors.strokeColor};
   border-radius: 30px;
-  background-color: #151419;
+  background-color: ${({ theme }) => theme.colors.bgColor};
 `;
 
 const HeightWrapper = styled.div`
@@ -138,7 +138,7 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 17px;
   }
   &:hover {

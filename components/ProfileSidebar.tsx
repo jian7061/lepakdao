@@ -68,8 +68,8 @@ const Wrapper = styled.div`
   height: 1208px;
   margin: 0 55px;
   border-radius: 30px;
-  background-color: #151419;
-  border: 2px solid #13131b;
+  background-color: ${({ theme }) => theme.colors.bgColor};
+  border: 2px solid ${({ theme }) => theme.colors.strokeColor};
 `;
 
 const LogoContainer = styled.div`
@@ -89,7 +89,7 @@ const Badge = styled.div`
 `;
 
 const Info = styled.div`
-  color: #595665;
+  color: ${({ theme }) => theme.colors.textColor};
   display: flex;
   flex-direction: column;
   align-items: center;

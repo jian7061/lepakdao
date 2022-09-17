@@ -37,7 +37,7 @@ const Status = styled.div`
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background-color: #6868b4;
+  background-color: ${({ theme }) => theme.colors.themeColor};
 `;
 
 const MeetingContainer = styled.div`
@@ -48,7 +48,7 @@ const MeetingContainer = styled.div`
   }
   p {
     font-size: 10px;
-    color: #595665;
+    color: ${({ theme }) => theme.colors.textColor};
   }
 `;
 
@@ -61,7 +61,7 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 17px;
   }
 `;

@@ -35,8 +35,8 @@ export const InfoPanel = ({
 };
 
 const Wrapper = styled.div`
-  background-color: #151419;
-  color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.bgColor};
+  color: ${({ theme }) => theme.colors.white};
   font-size: 25px;
   border-radius: 30px;
   padding: 20px;
@@ -63,7 +63,7 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 17px;
   }
   &:hover {

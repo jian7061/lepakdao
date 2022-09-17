@@ -188,11 +188,11 @@ const Members = styled.div`
     font-size: 55px;
   }
   div {
-    background-color: #a5eec2;
+    background-color: ${({ theme }) => theme.colors.lightGreen};
     width: 122px;
     height: 37px;
     border-radius: 5px;
-    color: #249651;
+    color: ${({ theme }) => theme.colors.green};
     text-align: center;
     font-size: 15px;
     line-height: 37px;

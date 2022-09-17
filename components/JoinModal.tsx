@@ -83,9 +83,9 @@ export default function JoinModal({
 }
 
 const Wrapper = styled.div`
-  background-color: #151419;
+  background-color: ${({ theme }) => theme.colors.bgColor};
   border-radius: 25px;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-direction: column;
   align-items: center;

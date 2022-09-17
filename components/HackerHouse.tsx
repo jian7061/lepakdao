@@ -51,7 +51,7 @@ const SVGContainer = styled.div`
   align-items: center;
   justify-content: center;
   svg {
-    color: #6868b4;
+    color: ${({ theme }) => theme.colors.themeColor};
     font-size: 28px;
   }
 `;
@@ -64,6 +64,6 @@ const HHContainer = styled.div`
   }
   p {
     font-size: 10px;
-    color: #595665;
+    color: ${({ theme }) => theme.colors.textColor};
   }
 `;

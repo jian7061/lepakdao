@@ -16,8 +16,8 @@ const Wrapper = styled.div`
   font-family: "Montserrat";
   height: 100vh;
   max-width: 100vw;
-  background-color: black;
-  color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export default Home;

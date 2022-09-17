@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   align-items: center;
   width: 564px;
   height: 175px;
-  color: #403f44;
+  color: ${({ theme }) => theme.colors.textInputColor};
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%236868B4' stroke-width='5' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 15px;
   margin-bottom: 86px;

@@ -17,10 +17,10 @@ export const CustomLayout = ({ children }: { children: any }) => {
 
 const Wrapper = styled.div`
   font-family: "Montserrat";
-  background-color: black;
+  background-color: ${({ theme }) => theme.colors.black};
   height: 100vh;
   max-width: 100vw;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   padding-top: 50px;
 `;

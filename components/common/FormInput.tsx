@@ -8,7 +8,7 @@ export const FormInput = styled.input`
   appearance: none;
   ::placeholder,
   ::-webkit-input-placeholder {
-    color: #403f44;
+    color: ${({ theme }) => theme.colors.textInputColor};
     font-size: 20px;
     padding-left: 20px;
   }

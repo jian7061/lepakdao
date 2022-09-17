@@ -110,7 +110,7 @@ const HouseName = styled.div`
 
 const Duration = styled.div`
   font-size: 25px;
-  color: #595665;
+  color: ${({ theme }) => theme.colors.textColor};
 `;
 
 const Divider = styled.div`

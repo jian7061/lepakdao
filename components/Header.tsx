@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const LogoContainer = styled.div`
